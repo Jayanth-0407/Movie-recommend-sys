@@ -15,7 +15,7 @@ st.title('🎬 Movie Recommender System')
 
 # Load data
 movie_list = pickle.load(open('movies.pkl', 'rb'))
-similarity = joblib.load('similarity_compressed.pkl')
+similarity = joblib.load(open('similarity_compressed.pkl','rb'))
 movies = pd.DataFrame(movie_list)
 
 def fetch_poster(movie_id):
