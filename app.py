@@ -63,4 +63,9 @@ if st.button('Recommend'):
 
     with col5:
         st.text(names[4])
+<<<<<<< HEAD
         st.image(posters[4])
+=======
+        st.image(posters[4])
+        
+>>>>>>> 6f1a24d5bfed3ba2b3a8b5b24b6e415a5f4f8643
