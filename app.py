@@ -13,7 +13,7 @@ api_key = os.getenv("API_KEY")
 
 st.title('🎬 Movie Recommender System')
 
-api_key=st.secrets(api_key)
+api_key=st.secrets["tmdb_api_key"]
 # Load data
 movie_list = pickle.load(open('movies.pkl', 'rb'))
 similarity = joblib.load(open('similarity_compressed.pkl','rb'))
