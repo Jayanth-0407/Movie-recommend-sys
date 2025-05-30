@@ -1,6 +1,8 @@
 streamlit
 pandas
-requests
-python-dotenv
+numpy
+scikit-learn
 joblib
 pickle
+requests
+python-dotenv
