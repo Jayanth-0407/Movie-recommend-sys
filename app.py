@@ -2,6 +2,7 @@ import streamlit as st
 import pandas as pd
 import pickle
 import requests
+import joblib
 
 import os
 from dotenv import load_dotenv
@@ -14,7 +15,7 @@ st.title('🎬 Movie Recommender System')
 
 # Load data
 movie_list = pickle.load(open('movies.pkl', 'rb'))
-similarity = pickle.load(open('similarity.pkl', 'rb'))
+similarity = joblib.load('similarity_compressed.pkl')
 movies = pd.DataFrame(movie_list)
 
 def fetch_poster(movie_id):
