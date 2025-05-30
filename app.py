@@ -12,9 +12,12 @@ api_key = os.getenv("API_KEY")
 
 st.title('🎬 Movie Recommender System')
 
-# Load data
-movie_list = pickle.load(open('movies.pkl', 'rb'))
-similarity = pickle.load(open('similarity.pkl', 'rb'))
+with open('movies.pkl', 'rb') as f:
+    movie_list = pickle.load(f)
+
+with open('similarity.pkl', 'rb') as f:
+    similarity = pickle.load(f)
+    
 movies = pd.DataFrame(movie_list)
 
 def fetch_poster(movie_id):
